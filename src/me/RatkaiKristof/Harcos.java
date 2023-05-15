@@ -11,7 +11,7 @@ public class Harcos {
     public void setEletero(int eletero) {
         this.eletero = eletero;
     }
-    public void tamadas(Varazslo varazslo){
+    public void tamad(Varazslo varazslo){
         Random rnd = new Random();
         int sebzes = rnd.nextInt(6)+1; //D6 sebzes 1-6
         varazslo.setEletero(varazslo.getEletero()- sebzes);
