@@ -6,7 +6,6 @@ public class Jatek {
         Varazslo varazslo = new Varazslo("V");
         JatekMezo jatekMezo = new JatekMezo(harcos, varazslo);
         Harc harc = new Harc();
-
             while (harcos.getEletero() > 0 && varazslo.getEletero() > 0 ) {
                 if (harcos.compareTo(varazslo) == 0){
                     jatekMezo.kiir(harcos, varazslo);
@@ -20,18 +19,17 @@ public class Jatek {
                     jatekMezo.lepes(harcos, varazslo);
                 }
                 Thread.sleep(666);
+            }
+            System.out.println("H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
 
-        }
-        System.out.println("H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
-
-        if (harcos.getEletero() <= 0 && varazslo.getEletero() <= 0) {
-            System.out.println("Döntetlen!");
-        }
-        else if (harcos.getEletero() <= 0){
-            System.out.println("A Varazsló gyözött!");
-        }
-        else if (varazslo.getEletero() <=0){
-            System.out.println("A Harcos gyözött!");
-        }
+                if (harcos.getEletero() <= 0 && varazslo.getEletero() <= 0) {
+                    System.out.println("Döntetlen!");
+                }
+                else if (harcos.getEletero() <= 0){
+                    System.out.println("A Varazsló gyözött!");
+                }
+                else if (varazslo.getEletero() <=0){
+                    System.out.println("A Harcos gyözött!");
+                }
     }
 }
