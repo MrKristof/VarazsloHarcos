@@ -8,7 +8,7 @@ public class Jatek {
         Harc harc = new Harc();
 
             while (harcos.getEletero() > 0 && varazslo.getEletero() > 0 ) {
-                if (harcos.getMezo() == varazslo.getMezo()){
+                if (harcos.compareTo(varazslo) == 0){
                     jatekMezo.kiir(harcos, varazslo);
                     System.out.println(" Harc: H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
                     harc.Harc(varazslo,harcos);
