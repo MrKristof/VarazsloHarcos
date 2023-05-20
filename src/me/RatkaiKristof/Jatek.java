@@ -1,3 +1,15 @@
+//ITH2QY - Ratkai Kristof MI 2022/23/2 Eloalk - Elosztott alkalmazások
+
+/*
+    GITHUB Link: https://github.com/MrKristof/VarazsloHarcos
+    Alapfeladat teljes
+    feladatok:
+    interfész használata öröklődéssel, polimorfizmussal - hogy a mezőket összehasonlítom.
+    öröklődési hierarchia és saját kivételosztály használata - saját kivételt nem tudtam hova készíteni, de öröklődés van.
+    szálkezelés bemutatása: a threaddel - nem tudom, hogy ez megfelelő-e annak mint feladat.
+ */
+
+
 package me.RatkaiKristof;
 
 public class Jatek {
