@@ -9,7 +9,7 @@ public class Karakter implements Comparable<Karakter>{
     protected int mezo;
 
     public Karakter(String nev){
-        this(nev, (int)rnd.nextInt(3)+1);
+        this(nev, (int)rnd.nextInt(3));
     }
     public Karakter(String nev, int mezo){
         Random rnd = new Random();
@@ -25,7 +25,6 @@ public class Karakter implements Comparable<Karakter>{
     public void setNev(String nev) {
         this.nev = nev;
     }
-
 
     public int getEletero() {
         return eletero;

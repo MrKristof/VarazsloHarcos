@@ -4,17 +4,22 @@ public class Jatek {
     public static void main (String[] args){
         Harcos harcos = new Harcos("H");
         Varazslo varazslo = new Varazslo("V");
-        JatekMezo jatekMezo = new JatekMezo();
+        JatekMezo jatekMezo = new JatekMezo(harcos, varazslo);
         Harc harc = new Harc();
 
-        jatekMezo.lepes(harcos,varazslo);
-
-        while (harcos.getEletero() > 0 && varazslo.getEletero() > 0 ) {
-            jatekMezo.mezo();
-            System.out.println(" --> H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
-            harc.Harc(varazslo,harcos);
-            System.out.println("X__ Harc: H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
-            }
+            while (harcos.getEletero() > 0 && varazslo.getEletero() > 0 ) {
+                if (harcos.getMezo() == varazslo.getMezo()){
+                    jatekMezo.kiir(harcos, varazslo);
+                    System.out.println(" Harc: H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
+                    harc.Harc(varazslo,harcos);
+                    jatekMezo.lepes(harcos, varazslo);
+                }
+                else {
+                    jatekMezo.kiir(harcos, varazslo);
+                    System.out.println(" --> H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
+                    jatekMezo.lepes(harcos, varazslo);
+                }
+        }
 
         if (harcos.getEletero() <= 0 && varazslo.getEletero() <= 0) {
             System.out.println("Döntetlen!");
