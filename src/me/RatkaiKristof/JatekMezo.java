@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class JatekMezo {
     private List<Character> mezo;
-    private static final int mezoMeret =3;
+    private static final int mezoMeret = 3;
 
     public JatekMezo(){
         mezo = new ArrayList<>(mezoMeret);
@@ -16,16 +16,14 @@ public class JatekMezo {
     }
     public void lepes(Harcos harcos, Varazslo varazslo){
         Random rnd = new Random();
-        int harcosMezo;
-        int varazsloMezo;
+        int harcosMezo = rnd.nextInt(mezoMeret);
+        int varazsloMezo = rnd.nextInt(mezoMeret);
 
-        do {
-            varazsloMezo = rnd.nextInt(mezoMeret);
+        while (harcosMezo == varazsloMezo){
             harcosMezo = rnd.nextInt(mezoMeret);
+            varazsloMezo = rnd.nextInt(mezoMeret);
         }
-        while (varazsloMezo == harcosMezo);
-            mezo.set(harcosMezo, 'H');
-            mezo.set(varazsloMezo, 'V');
+
     }
 
     public void mezo(){

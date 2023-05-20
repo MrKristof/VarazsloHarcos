@@ -4,9 +4,12 @@ import java.util.Random;
 
 public class Harcos {
     private int eletero;
+    private char nev;
+
     public Harcos(){
         Random rnd = new Random();
         this.eletero = rnd.nextInt(6)+4;
+        nev = 'H';
     }
     public int getEletero() {
         return eletero;
@@ -14,9 +17,13 @@ public class Harcos {
     public void setEletero(int eletero) {
         this.eletero = eletero;
     }
-    public void tamad(Varazslo varazslo){
-        Random rnd = new Random();
-        int sebzes = rnd.nextInt(6)+1; //D6 sebzes 1-6
-        varazslo.setEletero(varazslo.getEletero()- sebzes);
+
+    public char getNev() {
+        return nev;
     }
+
+    public void setNev(char nev) {
+        this.nev = nev;
+    }
+
 }

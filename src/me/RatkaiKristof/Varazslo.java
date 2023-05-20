@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class Varazslo {
     private int eletero;
-
+    private char nev;
     public Varazslo() {
         Random rnd = new Random();
         this.eletero = rnd.nextInt(6) + 4; //d6+3 életerő 4-9 között
+        nev = 'V';
     }
     public int getEletero(){
         return eletero;
@@ -15,9 +16,13 @@ public class Varazslo {
     public void setEletero(int eletero){
         this.eletero = eletero;
     }
-    public void tamad(Harcos harcos){
-        Random rnd = new Random();
-        int sebzes = rnd.nextInt(6)+1;
-        harcos.setEletero(harcos.getEletero()-sebzes);
+
+    public char getNev() {
+        return nev;
     }
+
+    public void setNev(char nev) {
+        this.nev = nev;
+    }
+
 }
