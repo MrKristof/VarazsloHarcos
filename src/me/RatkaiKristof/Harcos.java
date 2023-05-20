@@ -6,6 +6,7 @@ public class Harcos extends Karakter{
     public Harcos(String nev){
         super(nev);
         this.setEletero(getEletero());
+        this.setMezo(mezo);
     }
 
 }

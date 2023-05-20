@@ -7,6 +7,7 @@ public class Varazslo extends Karakter{
     public Varazslo(String nev){
         super(nev);
         this.setEletero(getEletero());
+        this.setMezo(mezo);
     }
 
 }

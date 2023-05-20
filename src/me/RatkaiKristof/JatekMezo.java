@@ -23,7 +23,8 @@ public class JatekMezo {
             harcosMezo = rnd.nextInt(mezoMeret);
             varazsloMezo = rnd.nextInt(mezoMeret);
         }
-
+        mezo.set(harcosMezo, 'H');
+        mezo.set(varazsloMezo, 'V');
     }
 
     public void mezo(){
