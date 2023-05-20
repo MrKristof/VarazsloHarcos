@@ -2,8 +2,8 @@ package me.RatkaiKristof;
 
 public class Jatek {
     public static void main (String[] args){
-        Harcos harcos = new Harcos();
-        Varazslo varazslo = new Varazslo();
+        Harcos harcos = new Harcos("H");
+        Varazslo varazslo = new Varazslo("V");
         JatekMezo jatekMezo = new JatekMezo();
         Harc harc = new Harc();
 
