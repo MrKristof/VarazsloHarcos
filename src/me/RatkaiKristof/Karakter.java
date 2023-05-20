@@ -3,7 +3,6 @@ package me.RatkaiKristof;
 import java.util.Random;
 
 public class Karakter implements Comparable<Karakter>{
-
     private static final Random rnd = new Random();
     protected String nev;
     protected int eletero;
