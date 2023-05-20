@@ -1,7 +1,7 @@
 package me.RatkaiKristof;
 
 public class Jatek {
-    public static void main (String[] args){
+    public static void main (String[] args) throws InterruptedException {
         Harcos harcos = new Harcos("H");
         Varazslo varazslo = new Varazslo("V");
         JatekMezo jatekMezo = new JatekMezo(harcos, varazslo);
@@ -19,7 +19,10 @@ public class Jatek {
                     System.out.println(" --> H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
                     jatekMezo.lepes(harcos, varazslo);
                 }
+                Thread.sleep(666);
+
         }
+        System.out.println("H: " + harcos.getEletero() + ", V: " + varazslo.getEletero());
 
         if (harcos.getEletero() <= 0 && varazslo.getEletero() <= 0) {
             System.out.println("Döntetlen!");
